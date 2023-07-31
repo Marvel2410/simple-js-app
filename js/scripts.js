@@ -32,5 +32,5 @@ for (let i = 0; i <pokemon.length; i++) {
     } else {
         heightCat = ' This is a small pokemon.';
     }
-document.write('<p>' + pokemon[i] + ' (height ' + heights[i] + '), ' + heightCat + '</p>');
+document.write('<p>' + pokemon[i] + ' (height ' + heights[i] + ') -- ' + heightCat + '</p>');
 }

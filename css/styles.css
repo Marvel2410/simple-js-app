@@ -1,3 +1,19 @@
+/*
+#F9C226 - yellow
+#26A9F9 - blue
+#f93F26
+*/
+
+
 body {
-    background-color: ;
+    background-color:#26A9F9;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+span{
+    color: #f93F26;
+    font-size: 20;
+    font-weight: 600;
+    background-color:#F9C226;
 }
