@@ -20,3 +20,10 @@ let pokemonList = [
         type: ['bug', 'poison']
     }
 ];
+let pokemon = ['Bulbasaur', 'Charmander', 'Squirtle', 'Weedle'];
+let heights = [0.5, 2.0, 1.8, 1.0];
+
+for (let i = 0; i <pokemon.length; i++) {
+document.write('<p>' + pokemon[i] + ' (height ' + heights[i] + ')</p>');
+
+}
