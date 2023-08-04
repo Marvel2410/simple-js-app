@@ -22,14 +22,15 @@ let pokemonRepository = (function() {
             type: ['bug', 'poison']
         }
     ];
-
-    return {
-        add: function(newPokemon) {
+    function add (newPokemon) {
             pokemonList.push(newPokemon);
-        },
-        getAll: function() {
+        }
+    function getAll() {
             return pokemonList;
         }
+    return {
+        add: add,
+        getAll: getAll
     };
 })();
 
