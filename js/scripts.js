@@ -1,5 +1,5 @@
 
-let pokemonRepository = (function() {
+let pokemonRepository = (function () {
     let pokemonList = [
         {
             name: 'Bulbasaur',
@@ -22,19 +22,24 @@ let pokemonRepository = (function() {
             type: ['bug', 'poison']
         }
     ];
-    function add (newPokemon) {
+    function add(newPokemon) {
+        if (typeof newPokemon === 'object') {
             pokemonList.push(newPokemon);
+        } else {
+            document.write('Error: Only ojects can be pokemon - TEST');
         }
+    }
     function getAll() {
-            return pokemonList;
-        }
+        return pokemonList;
+    }
     return {
         add: add,
         getAll: getAll
     };
 })();
 
-pokemonRepository.add({name: 'Pikachu', height: 1.4, type: 'Electric'});
+pokemonRepository.add({ name: 'Pikachu', height: 1.4, type: 'Electric' });
+pokemonRepository.add('I am not a pokemon'); //testing out conditional
 
 pokemonRepository.getAll().forEach(function (pokemon) {
     let heightCat;
