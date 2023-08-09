@@ -32,25 +32,38 @@ let pokemonRepository = (function () {
     function getAll() {
         return pokemonList;
     }
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector(".pokemon-list");
+        let listpokemon = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-class");
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+    }
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })();
 
-pokemonRepository.add({ name: 'Pikachu', height: 1.4, type: 'Electric' });
-pokemonRepository.add('I am not a pokemon'); //testing out conditional
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-    let heightCat;
-    if (pokemon.height > 1.5) {
-        heightCat = '  That is a <span> BIG </span> pokemon!';
-    } else if (pokemon.height > 0.5 && pokemon.height <= 1.5) {
-        heightCat = ' This is a regular size pokemon.';
-    } else {
-        heightCat = ' This is a small pokemon.';
-    }
-    document.write('<p>' + pokemon.name + ' (height ' + pokemon.height + ') -- ' + heightCat + '</p>');
+    pokemonRepository.addListItem(pokemon);
+
 });
 
+//pokemonRepository.add({ name: 'Pikachu', height: 1.4, type: 'Electric' });
+//pokemonRepository.add('I am not a pokemon'); //testing out conditional
 
+/* let heightCat;
+if (pokemon.height > 1.5) {
+    heightCat = '  That is a <span> BIG </span> pokemon!';
+} else if (pokemon.height > 0.5 && pokemon.height <= 1.5) {
+    heightCat = ' This is a regular size pokemon.';
+} else {
+    heightCat = ' This is a small pokemon.';
+}
+document.write('<p>' + pokemon.name + ' (height ' + pokemon.height + ') -- ' + heightCat + '</p>');
+*/
