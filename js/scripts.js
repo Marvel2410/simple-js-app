@@ -40,6 +40,12 @@ let pokemonRepository = (function () {
         button.classList.add("button-class");
         listpokemon.appendChild(button);
         pokemonList.appendChild(listpokemon);
+        button.addEventListener('click', function() {
+            showDetails(pokemon);
+        });
+    }
+    function showDetails(pokemon) {
+        console.log(pokemon);
     }
     return {
         add: add,
@@ -48,11 +54,18 @@ let pokemonRepository = (function () {
     };
 })();
 
+pokemonRepository.add({
+    name: 'Pikachu',
+    height: 0.4,
+    type: 'electric'
+});
 
 pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
 
 });
+
+
 
 //pokemonRepository.add({ name: 'Pikachu', height: 1.4, type: 'Electric' });
 //pokemonRepository.add('I am not a pokemon'); //testing out conditional

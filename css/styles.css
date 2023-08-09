@@ -34,7 +34,6 @@ body {
     cursor: pointer;
     border: 2px solid #1111E3;
     border-radius: 12px;
-    align-items: center;
   }
 
   .button-class:hover {
