@@ -69,26 +69,26 @@
         function showModal(pokemon) {
             let $modalBody = $('.modal-body');
             let $modalTitle = $('.modal-title');
-        
-        $('#pokemonModal').on('hide.bs.modal', function () {
-            $modalTitle.empty();
-            $modalBody.empty();
-        });
-        
+
+            $('#pokemonModal').on('hide.bs.modal', function () {
+                $modalTitle.empty();
+                $modalBody.empty();
+            });
+
             let $nameElement = $('<h1>').text(pokemon.name);
             let $imageElement = $('<img>').addClass('modal-img').attr('src', pokemon.imageUrl);
             let $heightElement = $('<p>').text('Height: ' + pokemon.height);
             let typeNames = pokemon.types.map(type => type.type.name);
             let $typeElement = $('<p>').text('Types: ' + typeNames.join(', '));
-        
+
             $modalTitle.append($nameElement);
             $modalBody.append($imageElement, $heightElement, $typeElement);
 
-         
-        
+
+
             $('#pokemonModal').modal('show');
         }
-     
+
         return {
             add: add,
             getAll: getAll,
@@ -106,13 +106,13 @@
     });
 })();
 
-let dialogPromiseReject; 
+let dialogPromiseReject;
 
-function hideModal () {
-    let modalContainer = document.querySelector ('#pokemonModal');
+function hideModal() {
+    let modalContainer = document.querySelector('#pokemonModal');
     modalContainer.classList.remove('is-visible');
 
-    if(dialogPromiseReject) {
+    if (dialogPromiseReject) {
         dialogPromiseReject();
         dialogPromiseReject = null;
     }
