@@ -73,7 +73,8 @@ body {
 
 #pokemonModal-container {
   display: none;
-  min-height: 916px;
+  min-height: 926px;
+  min-width: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -90,3 +91,8 @@ body {
   justify-content: center;
 }
 
+#pokemonModal-image {
+  width: 100px;
+  height: 100px;
+  min-height: 900px;
+}
