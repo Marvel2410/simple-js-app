@@ -1,0 +1,16 @@
+/*eslint jsx-quotes: ["error", "prefer-single"]*/
+{
+    "env": {
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "rules": {
+        "quotes": [
+            "error",
+            "prefer-single"
+        ],
+        "no-unused-vars":"warn"
+    }
+}
