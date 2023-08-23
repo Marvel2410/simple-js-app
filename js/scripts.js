@@ -70,8 +70,10 @@
             let $modalBody = $('.modal-body');
             let $modalTitle = $('.modal-title');
         
+        $('#pokemonModal').on('hide.bs.modal', function () {
             $modalTitle.empty();
             $modalBody.empty();
+        });
         
             let $nameElement = $('<h1>').text(pokemon.name);
             let $imageElement = $('<img>').addClass('modal-img').attr('src', pokemon.imageUrl);
