@@ -14,7 +14,7 @@ body {
     align-items: center;  
 }
 
-.button-class {
+.btn-primary, .btn-secondary {
     background-color: #D02809; /* Red */
     border: none;
     color:#FCFCFD;
@@ -71,16 +71,9 @@ body {
   cursor: pointer;
 }
 
-.modal h1 {
-  margin-top: 0;
-}
-
-.modal p {
-  margin-bottom: 0;
-}
-
-#modal-pokemon-container {
+#pokemonModal-container {
   display: none;
+  min-height: 916px;
   position: fixed;
   top: 0;
   left: 0;
@@ -91,7 +84,7 @@ body {
   overflow: auto;
 }
 
-#modal-pokemon-container.is-visible {
+#pokemonModal.is-visible {
   display: flex;
   align-items: center;
   justify-content: center;
